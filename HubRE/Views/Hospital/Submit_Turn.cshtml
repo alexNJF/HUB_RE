@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Submit_Turn";
+}
+
+<div class="jumbotron">
+    <h2 class="fa">رسید نهایی مشخصات  </h2>
+
+    <div class="row fa top-40 ">
+        <div class="col-md-12  ">
+            <p>نام بیمارستان :<b>  @ViewBag.hostpital_name</b></p>
+        </div>
+    </div>
+    <div class="row fa top-15 ">
+        <div class="col-md-12  ">
+            <p>نام مراجعه کننده :<b>   @ViewBag.user_name</b></p>
+        </div>
+    </div>
+    <div class="row fa top-15 ">
+        <div class="col-md-12  ">
+            <p>شماره تماس :<b> @ViewBag.user_phone</b></p>
+        </div>
+    </div>
+    <div class="row fa top-15 ">
+        <div class="col-md-12  ">
+            <p>جایگاه در صف  :<b> @ViewBag.jayegah_dar_saf</b></p>
+        </div>
+    </div>
+    <div class="row fa top-15 ">
+        <div class="col-md-12  ">
+            <p>زمان تقربی انتظار :<b> @ViewBag.hospital_wait_time</b> دقیقه</p>
+        </div>
+    </div>
+    <a href="/home" class="btn btn-lg btn-default fa" >بازگشت </a>
+</div>
+        

@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+}
+
+@foreach (var i in ViewBag.Hospital_Wait_Time)
+{
+    <div class="row top-15 item">
+        <a href="" data-toggle="modal" data-target="#TakeTurn_Modal_@i.Hospital_id" >
+            <div class="col-md-12 fa">
+                <h3>
+                    @i.Hospital_name
+                </h3>
+            </div>
+            <div class="col-md-12 fa warning">
+                زمان اتتظار @i.time دقیقه
+            </div>
+        </a>
+    </div>
+
+
+<!-- Modal -->
+<div id="TakeTurn_Modal_@i.Hospital_id" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form action="/Hospital/Submit_Turn" method="post">
+                <div class="modal-header ">
+                    <button type="button" class="close " data-dismiss="modal" style="float:left">&times;</button>
+                    <h4 class="modal-title fa">گرفتن نوبت</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div class="col-md-4 float-right">
+                            <input type="text" class="form-control fa  float-right" name="date" readonly value="@DateTime.Today.ToShortDateString()" style=" max-width: 100%;">
+                        </div>
+                        <div class="col-md-4 float-right">
+                            <input type="text" class="form-control fa  float-right" name="time" readonly value="@DateTime.Today.ToShortTimeString()" style=" max-width: 100%;">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 float-right top-15">
+                            <input type="text" class="form-control fa  float-right" name="hostpital_name" readonly value="@i.Hospital_name" style=" max-width: 100%;">
+                            <input type="hidden" name="hospital_id" value="@i.Hospital_id">
+                            <input type="hidden" name="hospital_wait_time" value="@i.time">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 float-right top-15">
+                            <input type="text" class="form-control fa  float-right" name="user_name" placeholder="نام و نام خانوادگی" required style=" max-width: 100%;" oninvalid="this.setCustomValidity('نام و نام خانوادگی خود را وارد کنید')" oninput="setCustomValidity('')">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 float-right top-15">
+                            <input type="tel" class="form-control fa  float-right" name="user_phone" placeholder="شماره تماس" required style=" max-width: 100%;" oninvalid="this.setCustomValidity('شماره تماس را وارد کنید ')" oninput="setCustomValidity('')">
+                        </div>
+                    </div>
+                    <input type="hidden" name="sick_level" value="@ViewBag.SickLevel" />;
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default btn-success fa" >گرفتن نوبت </button>
+                    <button type="button" class="btn btn-default fa" data-dismiss="modal">بستن</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+}

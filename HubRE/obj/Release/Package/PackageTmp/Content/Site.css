@@ -1,0 +1,60 @@
+﻿@import url(FontMain.css);
+.fa {
+    text-align: right;
+    font-family: IRANSans;
+}
+.emoji{
+    float:right;
+    margin-top:20px;
+}
+.top-40{
+    margin-top:40px;
+}
+
+.top-15 {
+    margin-top:15px;
+}
+.float-right{
+    float:right;
+}
+
+
+.item {
+    background-color: lightgray;
+    padding-bottom: 15px;
+    border-radius:10px;
+}
+.item:hover {
+        background-color: dimgrey;
+}
+a{
+    color:black;
+}
+a:hover{
+
+    color:black;    
+}
+.warning{
+    color:red;
+}
+.navbar-header {
+    float: right;
+    font-weight: bold;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}

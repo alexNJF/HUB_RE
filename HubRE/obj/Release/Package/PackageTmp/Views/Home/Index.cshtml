@@ -1,0 +1,41 @@
+﻿<div class="jumbotron">
+    <h2 class="fa">سامانه نوبت دهی بیمارستانی  </h2>
+    <p class="top-40 fa">لطفا شدت بیماری خود را انتخاب کنید  </p>
+    <div class="row ">
+        <div class="col-md-2 col-xs-4 emoji">
+            <a href="/Hospital?sick_level=0" data-toggle="tooltip" title="حالم خوبه" >
+                <img class="img-responsive" src="~/img/good.png"  />
+            </a>
+
+        </div>
+        <div class="col-md-2 col-xs-4 emoji">
+            <a href="/Hospital?sick_level=1" data-toggle="tooltip" title="بد نیستم ">
+                <img class="img-responsive" src="~/img/notbad.png" />
+                </a>
+        </div>
+        <div class="col-md-2 col-xs-4 emoji">
+            <a href="/Hospital?sick_level=2" data-toggle="tooltip" title=" حالم بده">
+                <img class="img-responsive" src="~/img/bad.png" />
+                </a>
+        </div>
+        <div class="col-md-2 col-xs-4 emoji">
+            <a href="/Hospital?sick_level=3" data-toggle="tooltip" title="حالم خیلی بده">
+                <img class="img-responsive" src="~/img/verybad.png" />
+                </a>
+        </div>
+        <div class="col-md-2 col-xs-4 emoji">
+            <a href="/Hospital?sick_level=4" data-toggle="tooltip" title="اورژانسی ام ">
+                <img class="img-responsive" src="~/img/superbad.png" />
+                </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+
